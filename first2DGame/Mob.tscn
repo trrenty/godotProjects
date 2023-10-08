@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5s0c75jmgdsj"]
+
+[ext_resource type="Script" path="res://Mob.cs" id="1_1g0yc"]
+[ext_resource type="Texture2D" uid="uid://dj454l4s5oak0" path="res://assets/art/enemyFlyingAlt_1.png" id="1_o6tb3"]
+[ext_resource type="Texture2D" uid="uid://caur7gnn2wjpj" path="res://assets/art/enemyFlyingAlt_2.png" id="2_bf86l"]
+[ext_resource type="Texture2D" uid="uid://2sdamjbfkx6b" path="res://assets/art/enemySwimming_1.png" id="3_ony7e"]
+[ext_resource type="Texture2D" uid="uid://benh21go474q6" path="res://assets/art/enemySwimming_2.png" id="4_lmr25"]
+[ext_resource type="Texture2D" uid="uid://c5p4rqfr2hn81" path="res://assets/art/enemyWalking_1.png" id="5_fwrc3"]
+[ext_resource type="Texture2D" uid="uid://n0hv8di7sicx" path="res://assets/art/enemyWalking_2.png" id="6_hegm6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_65dwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o6tb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bf86l")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ony7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lmr25")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fwrc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hegm6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6r7kn"]
+radius = 35.0
+height = 104.0
+
+[node name="Mob" type="RigidBody2D"]
+position = Vector2(158, 112)
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_1g0yc")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_65dwn")
+animation = &"walk"
+frame_progress = 0.614809
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6r7kn")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
