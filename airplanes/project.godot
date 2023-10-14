@@ -10,17 +10,10 @@ config_version=5
 
 [application]
 
-config/name="testProject"
-run/main_scene="res://Scenes/player.tscn"
-config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+config/name="Airplanes"
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="testProject"
+project/assembly_name="Airplanes"

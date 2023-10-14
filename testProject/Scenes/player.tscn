@@ -1,25 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://y6w60p38oo7v"]
+[gd_scene load_steps=9 format=3 uid="uid://6apqcltdxc3h"]
 
-[ext_resource type="Script" path="res://Player.cs" id="1_1f8c2"]
-[ext_resource type="Texture2D" uid="uid://dpkqdln0jxs8y" path="res://icon.svg" id="2_5vdqt"]
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_cblac"]
+[ext_resource type="Texture2D" uid="uid://dpkqdln0jxs8y" path="res://icon.svg" id="2_lb6fe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ah8p5"]
 size = Vector2(83.5, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_68gog"]
-atlas = ExtResource("2_5vdqt")
+atlas = ExtResource("2_lb6fe")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy0ss"]
-atlas = ExtResource("2_5vdqt")
+atlas = ExtResource("2_lb6fe")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qs4nb"]
-atlas = ExtResource("2_5vdqt")
+atlas = ExtResource("2_lb6fe")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcp7m"]
-atlas = ExtResource("2_5vdqt")
+atlas = ExtResource("2_lb6fe")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_65pd0"]
@@ -45,7 +45,7 @@ animations = [{
 [node name="RigidBody2D" type="RigidBody2D"]
 position = Vector2(-214, -303)
 gravity_scale = 0.0
-script = ExtResource("1_1f8c2")
+script = ExtResource("1_cblac")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
