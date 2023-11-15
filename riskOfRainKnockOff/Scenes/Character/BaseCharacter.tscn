@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv4kn367c7j3x"]
+
+[ext_resource type="Script" path="res://Scripts/Character/CharacterStateMachine.cs" id="1_vf5fc"]
+[ext_resource type="Script" path="res://Scripts/Character/States/IdleState.cs" id="2_mxi8r"]
+[ext_resource type="Texture2D" uid="uid://wftsbgq38118" path="res://icon.svg" id="3_c43wi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_742ab"]
+size = Vector2(65, 64)
+
+[node name="BaseCharacter" type="RigidBody2D"]
+mass = 75.0
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_vf5fc")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("2_mxi8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_742ab")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.476563, 0.474609)
+texture = ExtResource("3_c43wi")

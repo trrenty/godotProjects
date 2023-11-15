@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://crgm4a5u1maa3"]
+
+[ext_resource type="PackedScene" uid="uid://cv4kn367c7j3x" path="res://Scenes/Character/BaseCharacter.tscn" id="1_ovvng"]
+[ext_resource type="Script" path="res://Scripts/Debug/StateDebug.cs" id="2_k53e7"]
+
+[node name="World" type="Node"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ovvng")]
+position = Vector2(199, 106)
+
+[node name="Debug" type="Node" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Debug" node_paths=PackedStringArray("stateMachineHolder")]
+offset_right = 167.0
+offset_bottom = 52.0
+text = "Hello there"
+script = ExtResource("2_k53e7")
+stateMachineHolder = NodePath("../../CharacterBody2D")

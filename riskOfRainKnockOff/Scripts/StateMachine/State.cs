@@ -6,23 +6,23 @@ public partial class State : Node
     [Signal]
     public delegate void FinishedEventHandler(String nextState);
 
-    public void Enter() {
+    public virtual void Enter() {
         return;
     }
 
-    public void Exit() {
+    public virtual void Exit() {
         return;
     }
 
-    public void HandleInput(InputEvent eventToHandle) {
+    public virtual void HandleInput(InputEvent eventToHandle) {
         return;
     }
 
-    public void Update(double delta) {
+    public virtual void Update(double delta) {
         return;
     }
 
-    public void OnAnimationFinished(String animationName) {
+    public virtual void OnAnimationFinished(String animationName) {
         return;
     }
 
